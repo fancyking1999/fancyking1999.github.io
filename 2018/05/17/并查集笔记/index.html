@@ -6,20 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>PTA 01-复杂度1 最大子列和问题 | FancyKing&#39;s Lovely territory</title>
+  <title>数据结构 — — 并查集 | FancyKing&#39;s Lovely territory</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="原命题：中国大学MOOC 2018数据结构 链接   PTA 01-复杂度1 最大子列和问题 题面   思路-1 -TLE-代码   思路-2-在线处理 -AC-代码 PTA评判结果   代码思路">
-<meta name="keywords" content="算法,PTA">
+  <meta name="description" content="并查集一般用于对动态连通性的判断，主要应用于判断两个不相交元素是否在同一个集合，两个点是否连通，变量名等同性以及间接好友的判断。同时并查集经常作为其他模板的一部分实现某些功能。 并查集常用于的题型为判断某两个元素是否属于同一个集合，判断图是否连通或是否有环，或配合其他算法如最小生成树Kruskal，与DP共同使用等。">
+<meta name="keywords" content="数据结构">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PTA 01-复杂度1 最大子列和问题">
-<meta property="og:url" content="http://yoursite.com/2018/05/15/PTA-01-复杂度1-最大子列和问题/index.html">
+<meta property="og:title" content="数据结构 — — 并查集">
+<meta property="og:url" content="http://yoursite.com/2018/05/17/并查集笔记/index.html">
 <meta property="og:site_name" content="FancyKing&#39;s Lovely territory">
-<meta property="og:description" content="原命题：中国大学MOOC 2018数据结构 链接   PTA 01-复杂度1 最大子列和问题 题面   思路-1 -TLE-代码   思路-2-在线处理 -AC-代码 PTA评判结果   代码思路">
+<meta property="og:description" content="并查集一般用于对动态连通性的判断，主要应用于判断两个不相交元素是否在同一个集合，两个点是否连通，变量名等同性以及间接好友的判断。同时并查集经常作为其他模板的一部分实现某些功能。 并查集常用于的题型为判断某两个元素是否属于同一个集合，判断图是否连通或是否有环，或配合其他算法如最小生成树Kruskal，与DP共同使用等。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-15T12:48:55.997Z">
+<meta property="og:image" content="https://segmentfault.com/img/bVq2Ok">
+<meta property="og:updated_time" content="2018-05-17T07:19:41.338Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PTA 01-复杂度1 最大子列和问题">
-<meta name="twitter:description" content="原命题：中国大学MOOC 2018数据结构 链接   PTA 01-复杂度1 最大子列和问题 题面   思路-1 -TLE-代码   思路-2-在线处理 -AC-代码 PTA评判结果   代码思路">
+<meta name="twitter:title" content="数据结构 — — 并查集">
+<meta name="twitter:description" content="并查集一般用于对动态连通性的判断，主要应用于判断两个不相交元素是否在同一个集合，两个点是否连通，变量名等同性以及间接好友的判断。同时并查集经常作为其他模板的一部分实现某些功能。 并查集常用于的题型为判断某两个元素是否属于同一个集合，判断图是否连通或是否有环，或配合其他算法如最小生成树Kruskal，与DP共同使用等。">
+<meta name="twitter:image" content="https://segmentfault.com/img/bVq2Ok">
   
     <link rel="alternative" href="/atom.xml" title="FancyKing&#39;s Lovely territory" type="application/atom+xml">
   
@@ -133,20 +135,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-PTA-01-复杂度1-最大子列和问题" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-并查集笔记" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      PTA 01-复杂度1 最大子列和问题
+      数据结构 — — 并查集
     </h1>
   
 
         
-        <a href="/2018/05/15/PTA-01-复杂度1-最大子列和问题/" class="archive-article-date">
-  	<time datetime="2018-05-15T12:45:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-15</time>
+        <a href="/2018/05/17/并查集笔记/" class="archive-article-date">
+  	<time datetime="2018-05-17T07:17:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-17</time>
 </a>
 		
 		<span class="archive-article-date">
@@ -158,56 +160,51 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>原命题：中国大学MOOC 2018数据结构 <a href="https://pintia.cn/problem-sets/951072707007700992/problems/968389752868327424" target="_blank" rel="noopener">链接</a></p>
-</blockquote>
-<ul>
-<li>PTA 01-复杂度1 最大子列和问题<ul>
-<li>题面</li>
-</ul>
-</li>
-<li>思路-1<ul>
-<li>-TLE-代码</li>
-</ul>
-</li>
-<li>思路-2-在线处理<ul>
-<li>-AC-代码</li>
-<li>PTA评判结果</li>
-</ul>
-</li>
-<li>代码思路</li>
+        <ul>
+<li>并查集一般用于对动态连通性的判断，主要应用于判断两个不相交元素是否在同一个集合，两个点是否连通，变量名等同性以及间接好友的判断。同时并查集经常作为其他模板的一部分实现某些功能。</li>
+<li>并查集常用于的题型为判断某两个元素是否属于同一个集合，判断图是否连通或是否有环，或配合其他算法如最小生成树Kruskal，与DP共同使用等。</li>
 </ul>
 <a id="more"></a>
-<h2 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h2><blockquote>
-<p>01-复杂度1 最大子列和问题（20 分）<br>给定K个整数组成的序列{ N1 , N2 , …, NK  }，“连续子列”被定义为{ Ni , Ni+1 , …, Nj }，其中 1≤i≤j≤K。“最大子列和”则被定义为所有连续子列元素的和中最大者。例如给定序列{ -2, 11, -4, 13, -5, -2 }，其连续子列{ 11, -4, 13 }有最大的和20。现要求你编写程序，计算给定整数序列的最大子列和。</p>
-</blockquote>
-<blockquote>
-<p>本题旨在测试各种不同的算法在各种数据情况下的表现。各组测试数据特点如下：<br>数据1：与样例等价，测试基本正确性；<br>数据2：102个随机整数；<br>数据3：103个随机整数；<br>数据4：104个随机整数；<br>数据5：105个随机整数；</p>
-</blockquote>
-<blockquote>
-<p>输入格式:<br>输入第1行给出正整数K (≤100000)；第2行给出K个整数，其间以空格分隔。<br>输出格式:<br>在一行中输出最大子列和。如果序列中所有整数皆为负数，则输出0。</p>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>输入样例:<br>6<br>-2 11 -4 13 -5 -2<br>输出样例:<br>20</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>作者: DS课程组<br>单位: 浙江大学<br>时间限制: 50000ms<br>内存限制: 64MB</p>
-</blockquote>
-<h1 id="思路-1"><a href="#思路-1" class="headerlink" title="思路-1"></a>思路-1</h1><p>首先想到的思路是简单地单纯的暴力枚举，也就是分别枚举起点和终点，这样的话是可以在不计时间的情况下解决问题的，但是提交上去肯定会TLE</p>
+<ul>
+<li>一般，并查集都会实现两种操作，就是查询函数，和链接函数。</li>
+</ul>
+<h1 id="普通并查集"><a href="#普通并查集" class="headerlink" title="普通并查集"></a>普通并查集</h1><ul>
+<li>类似于树，按照节点的方式来储存，理解并查集。其中的元素的储存，是由原始父节点为代表的树形结构。</li>
+<li>每一个元素， 都是一个集合，其中的数值，指向 上层节点(父节点)，由此方法我们可以推断，<br>  <strong>只要两个节点所储存的最原始的父节点相同， 则两个点所代表的元素位于同一个集合。</strong></li>
+</ul>
+<h2 id="路径压缩"><a href="#路径压缩" class="headerlink" title="路径压缩"></a>路径压缩</h2><ul>
+<li>为了进一步加快查找的速度，我们直接将新加入的节点，连接到原始节点上，这样就可以直接看出，两元素是否位于相同集合。</li>
+</ul>
+<h2 id="三个操作-（数组为例）"><a href="#三个操作-（数组为例）" class="headerlink" title="三个操作  （数组为例）"></a>三个操作  （数组为例）</h2><h3 id="初始化操作"><a href="#初始化操作" class="headerlink" title="初始化操作"></a>初始化操作</h3><ul>
+<li><p>建立合适的储存方式，一般有结构体和数组两种，差别不大，功能是一样的。</p>
+<ul>
+<li>基本的初始化，就是建立每一个节点的信息，比如 要储存当前元素的父节点，要储存当前元素在树内的深度，<br>  当前元素所代表的数值意义等等。</li>
+<li>有时可以将元素所代表的数值意义和当前元素的父节点合并表示，根据题目不同，还要建立别的，具体再分析。</li>
+</ul>
+</li>
+</ul>
 <hr>
-<h2 id="TLE-代码"><a href="#TLE-代码" class="headerlink" title="-TLE-代码"></a><em>-TLE-代码</em></h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAX = <span class="number">200000</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a[MAX];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LL num;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span> &gt;&gt; num)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(LL i = <span class="number">0</span>; i &lt; num; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; a[i];</span><br><span class="line">        &#125;</span><br><span class="line">        LL MAX = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(LL i = <span class="number">0</span>; i &lt; num; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(LL j = i; j &lt; num; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                LL Temp_Max = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">for</span>(LL k = i; k &lt;= j; k++)</span><br><span class="line">                &#123;</span><br><span class="line">                    Temp_Max += a[k];</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(Temp_Max &gt; MAX)</span><br><span class="line">                    MAX = Temp_Max;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;MAX&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">100000</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> m[maxn] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> r[maxn] = &#123;<span class="number">0</span>&#125;;<span class="comment">// 数据比较多，节点链比较长时，合并短的，节约时间。</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">int</span> End)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; maxn &amp;&amp; i &lt;= End; i++)<span class="comment">//初始化每一个节点都是父节点，深度为0</span></span><br><span class="line">    &#123;</span><br><span class="line">        m[i] = i;</span><br><span class="line">        r[m] = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
-<h1 id="思路-2-在线处理"><a href="#思路-2-在线处理" class="headerlink" title="思路-2-在线处理"></a>思路-2-在线处理</h1><p>然后就想要缩短时间（废话），一开始想着要一个一个的计算，先算出每一个位之前的最大值，然后后面可以利用，后来觉得还是太啰嗦，就没具体写完，看到了陈越姥姥讲的一种思路，就是在线处理，复杂度O（N），可以一边输入一边处理，这样的话，节约时间，也节约了空间，岂不是美哉</p>
+<h3 id="查找操作"><a href="#查找操作" class="headerlink" title="查找操作"></a>查找操作</h3><ul>
+<li>普通并查集的基本查找代码比较简单，这里直接给出代码。</li>
+</ul>
 <hr>
-<h2 id="AC-代码"><a href="#AC-代码" class="headerlink" title="-AC-代码"></a><em>-AC-代码</em></h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LL num = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span> &gt;&gt; num)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> MAX = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> NOW = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(LL i = <span class="number">0</span>; i &lt; num ; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> temp = <span class="number">0</span>;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; temp;</span><br><span class="line">            NOW += temp;</span><br><span class="line">            <span class="keyword">if</span>(NOW &gt; MAX)</span><br><span class="line">                MAX = NOW;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(NOW &lt; <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                NOW = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; MAX &lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Find</span><span class="params">(<span class="keyword">int</span> i)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(m[i] == i)</span><br><span class="line">        <span class="keyword">return</span> i;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> m[i] = Find(m[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
-<h2 id="PTA评判结果"><a href="#PTA评判结果" class="headerlink" title="PTA评判结果"></a>PTA评判结果</h2><blockquote>
-</blockquote>
-<p>2018/3/17 19:00:35  答案正确    20  01-复杂度1 C++ (clang++)   40 ms<br>测试点 提示  结果  耗时  内存<br>0   sample 有正负，负数开头结尾，最大和有更新    答案正确    3 ms    224KB<br>1   100个随机数 答案正确    2 ms    252KB<br>2   1000个随机数    答案正确    3 ms    256KB<br>3   10000个随机数   答案正确    6 ms    256KB<br>4   100000个随机数  答案正确    40 ms   248KB</p>
-<p>就是比暴力美丽的多（/xk）</p>
-<h2 id="代码思路"><a href="#代码思路" class="headerlink" title="代码思路"></a><em>代码思路</em></h2><p>使用动态处理的方法，现将每n个位数的和算出来，和已经保存下来的最大值相比较，如果大于已知的最大值，则更新，否则，由于规定全是负数的话，结果为0，那么每一步都判断一下<code>Temp_Max</code>的正负就好，并不需要担心最大值会丢失，因为如果有最大值，肯定已经保存下来了。</p>
+<h3 id="合并操作"><a href="#合并操作" class="headerlink" title="合并操作"></a>合并操作</h3><p><img src="https://segmentfault.com/img/bVq2Ok" alt=""></p>
+<ul>
+<li>先给出不考虑深度(单链长度) 的代码</li>
+</ul>
+<hr>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Union</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    m[Find(b)] = Find(a);</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>下面是考虑深度(单链长度) 的代码</li>
+</ul>
+<hr>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Union</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    i=Find(i);</span><br><span class="line">    j=Find(j);</span><br><span class="line">    <span class="keyword">if</span>(i == j)</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    <span class="keyword">if</span>(rank[i] &gt; rank[j])</span><br><span class="line">        <span class="built_in">set</span>[j] = i;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(rank[i] == rank[j])</span><br><span class="line">            rank[j]++;</span><br><span class="line">        <span class="built_in">set</span>[i] = j;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
 
       
 
@@ -221,11 +218,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PTA</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
         		</li>
       		
 		</ul>
@@ -281,7 +274,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/05/15/PTA-01-复杂度1-最大子列和问题/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/05/17/并查集笔记/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -295,18 +288,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/05/17/并查集笔记/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          数据结构 — — 并查集
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/05/15/Sublime-Text-3-折腾笔记/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Sublime Text 3 折腾笔记</div>
+    <a href="/2018/05/15/PTA-01-复杂度1-最大子列和问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">PTA 01-复杂度1 最大子列和问题</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -333,7 +317,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题面"><span class="toc-number">1.</span> <span class="toc-text">题面</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#思路-1"><span class="toc-number"></span> <span class="toc-text">思路-1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#TLE-代码"><span class="toc-number">1.</span> <span class="toc-text">-TLE-代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#思路-2-在线处理"><span class="toc-number"></span> <span class="toc-text">思路-2-在线处理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#AC-代码"><span class="toc-number">1.</span> <span class="toc-text">-AC-代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PTA评判结果"><span class="toc-number">2.</span> <span class="toc-text">PTA评判结果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码思路"><span class="toc-number">3.</span> <span class="toc-text">代码思路</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#普通并查集"><span class="toc-number">1.</span> <span class="toc-text">普通并查集</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#路径压缩"><span class="toc-number">1.1.</span> <span class="toc-text">路径压缩</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三个操作-（数组为例）"><span class="toc-number">1.2.</span> <span class="toc-text">三个操作  （数组为例）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化操作"><span class="toc-number">1.2.1.</span> <span class="toc-text">初始化操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查找操作"><span class="toc-number">1.2.2.</span> <span class="toc-text">查找操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#合并操作"><span class="toc-number">1.2.3.</span> <span class="toc-text">合并操作</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
