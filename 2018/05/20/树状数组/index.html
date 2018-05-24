@@ -6,20 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>PTA 01-复杂度1 最大子列和问题 | FancyKing&#39;s Lovely territory</title>
+  <title>树状数组 | FancyKing&#39;s Lovely territory</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="原命题：中国大学MOOC 2018数据结构 链接   PTA 01-复杂度1 最大子列和问题 题面   思路-1 -TLE-代码   思路-2-在线处理 -AC-代码 PTA评判结果   代码思路">
-<meta name="keywords" content="算法,PTA">
+  <meta name="description" content="定义树状数组也叫做Fenwick树， 也叫做 Binary Indexed Tree，经常被用来 高效的计算数列的前缀和 和 区间和等 查询和修改的时间复杂度皆为O(log(n)),空间复杂度为O(n);">
+<meta name="keywords" content="树状数组">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PTA 01-复杂度1 最大子列和问题">
-<meta property="og:url" content="http://yoursite.com/2018/05/15/PTA-01-复杂度1-最大子列和问题/index.html">
+<meta property="og:title" content="树状数组">
+<meta property="og:url" content="http://yoursite.com/2018/05/20/树状数组/index.html">
 <meta property="og:site_name" content="FancyKing&#39;s Lovely territory">
-<meta property="og:description" content="原命题：中国大学MOOC 2018数据结构 链接   PTA 01-复杂度1 最大子列和问题 题面   思路-1 -TLE-代码   思路-2-在线处理 -AC-代码 PTA评判结果   代码思路">
+<meta property="og:description" content="定义树状数组也叫做Fenwick树， 也叫做 Binary Indexed Tree，经常被用来 高效的计算数列的前缀和 和 区间和等 查询和修改的时间复杂度皆为O(log(n)),空间复杂度为O(n);">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-15T12:48:55.997Z">
+<meta property="og:image" content="http://odwv9d2u8.bkt.clouddn.com/17-10-22/33371936.jpg">
+<meta property="og:updated_time" content="2018-05-24T14:16:18.040Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PTA 01-复杂度1 最大子列和问题">
-<meta name="twitter:description" content="原命题：中国大学MOOC 2018数据结构 链接   PTA 01-复杂度1 最大子列和问题 题面   思路-1 -TLE-代码   思路-2-在线处理 -AC-代码 PTA评判结果   代码思路">
+<meta name="twitter:title" content="树状数组">
+<meta name="twitter:description" content="定义树状数组也叫做Fenwick树， 也叫做 Binary Indexed Tree，经常被用来 高效的计算数列的前缀和 和 区间和等 查询和修改的时间复杂度皆为O(log(n)),空间复杂度为O(n);">
+<meta name="twitter:image" content="http://odwv9d2u8.bkt.clouddn.com/17-10-22/33371936.jpg">
   
     <link rel="alternative" href="/atom.xml" title="FancyKing&#39;s Lovely territory" type="application/atom+xml">
   
@@ -138,20 +140,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-PTA-01-复杂度1-最大子列和问题" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-树状数组" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      PTA 01-复杂度1 最大子列和问题
+      树状数组
     </h1>
   
 
         
-        <a href="/2018/05/15/PTA-01-复杂度1-最大子列和问题/" class="archive-article-date">
-  	<time datetime="2018-05-15T12:45:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-15</time>
+        <a href="/2018/05/20/树状数组/" class="archive-article-date">
+  	<time datetime="2018-05-20T04:54:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-20</time>
 </a>
 		
 		<span class="archive-article-date">
@@ -163,56 +165,36 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>原命题：中国大学MOOC 2018数据结构 <a href="https://pintia.cn/problem-sets/951072707007700992/problems/968389752868327424" target="_blank" rel="noopener">链接</a></p>
-</blockquote>
-<ul>
-<li>PTA 01-复杂度1 最大子列和问题<ul>
-<li>题面</li>
-</ul>
-</li>
-<li>思路-1<ul>
-<li>-TLE-代码</li>
-</ul>
-</li>
-<li>思路-2-在线处理<ul>
-<li>-AC-代码</li>
-<li>PTA评判结果</li>
-</ul>
-</li>
-<li>代码思路</li>
-</ul>
+        <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>树状数组也叫做Fenwick树， 也叫做 Binary Indexed Tree，经常被用来 高效的计算数列的前缀和 和 区间和等 查询和修改的时间复杂度皆为O(log(n)),空间复杂度为O(n);</p>
 <a id="more"></a>
-<h2 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h2><blockquote>
-<p>01-复杂度1 最大子列和问题（20 分）<br>给定K个整数组成的序列{ N1 , N2 , …, NK  }，“连续子列”被定义为{ Ni , Ni+1 , …, Nj }，其中 1≤i≤j≤K。“最大子列和”则被定义为所有连续子列元素的和中最大者。例如给定序列{ -2, 11, -4, 13, -5, -2 }，其连续子列{ 11, -4, 13 }有最大的和20。现要求你编写程序，计算给定整数序列的最大子列和。</p>
-</blockquote>
+<p> <img src="http://odwv9d2u8.bkt.clouddn.com/17-10-22/33371936.jpg" alt=""></p>
+<p>  图片源自banananana:<a href="https://www.cnblogs.com/George1994/" target="_blank" rel="noopener">herf</a><br>  图片中的a 是原数据数组，c 是树状数组，不难发现</p>
 <blockquote>
-<p>本题旨在测试各种不同的算法在各种数据情况下的表现。各组测试数据特点如下：<br>数据1：与样例等价，测试基本正确性；<br>数据2：102个随机整数；<br>数据3：103个随机整数；<br>数据4：104个随机整数；<br>数据5：105个随机整数；</p>
+<p>C1 = A1<br>C2 = A1+A2<br>C3 = A3<br>C4 = A1+A2+A3+A4<br>C5 = A5<br>C6 = A5+A6<br>C7 = A7<br>C8 = A1+A2+A3+A4+A5+A6+A7+A8</p>
 </blockquote>
+<h1 id="原理及几个操作函数"><a href="#原理及几个操作函数" class="headerlink" title="原理及几个操作函数"></a>原理及几个操作函数</h1><h2 id="lowbit"><a href="#lowbit" class="headerlink" title="lowbit()"></a>lowbit()</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">lowbit</span><span class="params">(<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function">    <span class="title">return</span> <span class="params">(x &amp; -x)</span></span>;</span><br></pre></td></tr></table></figure>
+<p>此函数利用的是二进制的性质，来求得某一个数字的从后往前的连续0的位数，也就是取出数字最低位的1.</p>
+<pre><code>举例说明：
+-x 代表 x 的负数 计算机中负数使用对应的 正数的补码 来表示.
+对于数字 6，其二进制为110，-x 就是 010,进行求与运算结果为 0010 = 2^1 = 2；
+</code></pre><p>按照此方法求得的答案k，用原来的 x 加上k，就得到了此节点的父节点，而如果将原来的 x 减去k，就得到了此节点的上一个父节点。</p>
+<h2 id="单点修改-change"><a href="#单点修改-change" class="headerlink" title="单点修改-change()"></a>单点修改-change()</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将a数组里的第x个元素更改d,数组向后更新</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">change</span><span class="params">(LL&amp; a,<span class="keyword">int</span> x,<span class="keyword">int</span> d)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x &lt; <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    <span class="keyword">while</span>(x &lt; maxn)&#123;</span><br><span class="line">        a[x] += d;</span><br><span class="line">        x += lowbit(x);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="求和函数-addsum"><a href="#求和函数-addsum" class="headerlink" title="求和函数-addsum()"></a>求和函数-addsum()</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 数组向前求和</span></span><br><span class="line"><span class="function">LL <span class="title">addsum</span><span class="params">(LL&amp; a,<span class="keyword">int</span> l)</span></span>&#123;</span><br><span class="line">    LL ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(l &gt; <span class="number">0</span>)&#123;</span><br><span class="line">        ans += a[l];</span><br><span class="line">        l -= lowbit(l);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="区间更新-区间查询"><a href="#区间更新-区间查询" class="headerlink" title="区间更新 + 区间查询"></a>区间更新 + 区间查询</h1><p>观察下列式子：</p>
 <blockquote>
-<p>输入格式:<br>输入第1行给出正整数K (≤100000)；第2行给出K个整数，其间以空格分隔。<br>输出格式:<br>在一行中输出最大子列和。如果序列中所有整数皆为负数，则输出0。</p>
+<p>a[1] + a[2] + … + a[n]  = (c[1]) + (c[1]+c[2]) + … + (c[1]+c[2]+…+c[n]) </p>
+<p>= n <em> c[1] + (n-1) </em> c[2] + … + c[n]</p>
+<p>= n <em> (c[1] + c[2] + … + c[n]) - (0 </em> c[1] + 1 <em> c[2] + … + (n-1) </em> c[n])    (①)</p>
+<p>那么我们就维护一个数组c2[n]，其中c2[i] = (i - 1) <em> c[i]<br>每当修改c的时候，就同步修改一下c2，这样复杂度就不会改变<br>那么可得      ① = n </em> addsum(c,n) - addsum(c2,n);</p>
 </blockquote>
-<blockquote>
-<blockquote>
-<p>输入样例:<br>6<br>-2 11 -4 13 -5 -2<br>输出样例:<br>20</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>作者: DS课程组<br>单位: 浙江大学<br>时间限制: 50000ms<br>内存限制: 64MB</p>
-</blockquote>
-<h1 id="思路-1"><a href="#思路-1" class="headerlink" title="思路-1"></a>思路-1</h1><p>首先想到的思路是简单地单纯的暴力枚举，也就是分别枚举起点和终点，这样的话是可以在不计时间的情况下解决问题的，但是提交上去肯定会TLE</p>
-<hr>
-<h2 id="TLE-代码"><a href="#TLE-代码" class="headerlink" title="-TLE-代码"></a><em>-TLE-代码</em></h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAX = <span class="number">200000</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a[MAX];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LL num;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span> &gt;&gt; num)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(LL i = <span class="number">0</span>; i &lt; num; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; a[i];</span><br><span class="line">        &#125;</span><br><span class="line">        LL MAX = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(LL i = <span class="number">0</span>; i &lt; num; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(LL j = i; j &lt; num; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                LL Temp_Max = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">for</span>(LL k = i; k &lt;= j; k++)</span><br><span class="line">                &#123;</span><br><span class="line">                    Temp_Max += a[k];</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(Temp_Max &gt; MAX)</span><br><span class="line">                    MAX = Temp_Max;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;MAX&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<h1 id="思路-2-在线处理"><a href="#思路-2-在线处理" class="headerlink" title="思路-2-在线处理"></a>思路-2-在线处理</h1><p>然后就想要缩短时间（废话），一开始想着要一个一个的计算，先算出每一个位之前的最大值，然后后面可以利用，后来觉得还是太啰嗦，就没具体写完，看到了陈越姥姥讲的一种思路，就是在线处理，复杂度O（N），可以一边输入一边处理，这样的话，节约时间，也节约了空间，岂不是美哉</p>
-<hr>
-<h2 id="AC-代码"><a href="#AC-代码" class="headerlink" title="-AC-代码"></a><em>-AC-代码</em></h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LL num = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span> &gt;&gt; num)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> MAX = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> NOW = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(LL i = <span class="number">0</span>; i &lt; num ; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> temp = <span class="number">0</span>;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; temp;</span><br><span class="line">            NOW += temp;</span><br><span class="line">            <span class="keyword">if</span>(NOW &gt; MAX)</span><br><span class="line">                MAX = NOW;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(NOW &lt; <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                NOW = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; MAX &lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="PTA评判结果"><a href="#PTA评判结果" class="headerlink" title="PTA评判结果"></a>PTA评判结果</h2><blockquote>
-</blockquote>
-<p>2018/3/17 19:00:35  答案正确    20  01-复杂度1 C++ (clang++)   40 ms<br>测试点 提示  结果  耗时  内存<br>0   sample 有正负，负数开头结尾，最大和有更新    答案正确    3 ms    224KB<br>1   100个随机数 答案正确    2 ms    252KB<br>2   1000个随机数    答案正确    3 ms    256KB<br>3   10000个随机数   答案正确    6 ms    256KB<br>4   100000个随机数  答案正确    40 ms   248KB</p>
-<p>就是比暴力美丽的多（/xk）</p>
-<h2 id="代码思路"><a href="#代码思路" class="headerlink" title="代码思路"></a><em>代码思路</em></h2><p>使用动态处理的方法，现将每n个位数的和算出来，和已经保存下来的最大值相比较，如果大于已知的最大值，则更新，否则，由于规定全是负数的话，结果为0，那么每一步都判断一下<code>Temp_Max</code>的正负就好，并不需要担心最大值会丢失，因为如果有最大值，肯定已经保存下来了。</p>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p><a href="https://vjudge.net/problem/POJ-3468" target="_blank" rel="noopener">POJ</a>        //  Code 用 树状数组 给出<br><a href="http://www.codevs.cn/problem/1082/" target="_blank" rel="noopener">CodeVS</a> </p>
+<p>先给出代码：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e5</span> + <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">LL a[maxn + <span class="number">10</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">LL m[maxn + <span class="number">10</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">LL m1[maxn + <span class="number">10</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function">LL <span class="title">lowbit</span><span class="params">(LL x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (x &amp; -x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">LL <span class="title">change</span><span class="params">(LL* s, LL n, LL d)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (n &lt; <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (n &lt; maxn)</span><br><span class="line">    &#123;</span><br><span class="line">        s[n] += d;</span><br><span class="line">        n += lowbit(n);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">LL <span class="title">addsum</span><span class="params">(LL* s, LL x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LL ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (x &gt; <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        ans += s[x];</span><br><span class="line">        x -= lowbit(x);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">std</span>::ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">cout</span>.tie(<span class="number">0</span>);</span><br><span class="line">    LL N, Q;</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">cin</span> &gt;&gt; N &gt;&gt; Q)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">memset</span>(m, <span class="number">0</span>, <span class="keyword">sizeof</span>(m));</span><br><span class="line">        <span class="keyword">for</span> (LL i = <span class="number">1</span>; i &lt;= N; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; a[i];</span><br><span class="line">            change(m, i, a[i] - a[i - <span class="number">1</span>]);</span><br><span class="line">            change(m1, i, (i - <span class="number">1</span>) * (a[i] - a[i - <span class="number">1</span>]));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">char</span> C;</span><br><span class="line">        LL a, b, c;</span><br><span class="line">        <span class="keyword">while</span> (Q--)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; C;</span><br><span class="line">            <span class="keyword">if</span> (C == <span class="string">'Q'</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">cin</span> &gt;&gt; a &gt;&gt; b;</span><br><span class="line">                LL sumo = (a - <span class="number">1</span>) * addsum(m, a - <span class="number">1</span>) - addsum(m1, a - <span class="number">1</span>);</span><br><span class="line">                LL sumt = b * addsum(m, b) - addsum(m1, b);</span><br><span class="line">                <span class="built_in">cout</span> &lt;&lt; sumt - sumo &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">cin</span> &gt;&gt; a &gt;&gt; b &gt;&gt; c;</span><br><span class="line">                change(m, a , c);</span><br><span class="line">                change(m, b + <span class="number">1</span>, -c);</span><br><span class="line">                change(m1, a, (a - <span class="number">1</span>) * c);</span><br><span class="line">                change(m1, b + <span class="number">1</span>, -c * (b));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>当用户输入数据的时候，每一次更新，先将树状数组 m 从 a 之后更新为加上 c，然后为了保证区间更新，再将树状数组 m 的b + 1之后再减去 c，如此，就保证了区间更新。</li>
+<li>区间更新的同时，要更新树状数组 m1， 从a 位开始都加上 <code>(a-1)  *  c</code>,  从 b + 1位开始，都减去 <code>c * b</code>, 就保证了第二个数组是在 <code>logn</code> 的基础上更新的，保证了时间。</li>
+<li>区间的查询，我们只需要取出m 数组的<code>a - 1</code>位乘上<code>( a - 1 )</code>再减去m1 的<code>a - 1</code> 的<code>a - 1</code>的查询，得到前a 项的前n 项和， 再减去类似方法求出的前 b 项的前 n 项和即可得到所求区间的和！</li>
+</ul>
 
       
 
@@ -226,11 +208,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PTA</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">树状数组</a>
         		</li>
       		
 		</ul>
@@ -286,7 +264,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/05/15/PTA-01-复杂度1-最大子列和问题/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/05/20/树状数组/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -300,18 +278,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/05/17/并查集笔记/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          数据结构 — — 并查集
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/05/15/Sublime-Text-3-折腾笔记/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Sublime Text 3 折腾笔记</div>
+    <a href="/2018/05/17/并查集笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数据结构 — — 并查集</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -338,7 +307,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题面"><span class="toc-number">1.</span> <span class="toc-text">题面</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#思路-1"><span class="toc-number"></span> <span class="toc-text">思路-1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#TLE-代码"><span class="toc-number">1.</span> <span class="toc-text">-TLE-代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#思路-2-在线处理"><span class="toc-number"></span> <span class="toc-text">思路-2-在线处理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#AC-代码"><span class="toc-number">1.</span> <span class="toc-text">-AC-代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PTA评判结果"><span class="toc-number">2.</span> <span class="toc-text">PTA评判结果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码思路"><span class="toc-number">3.</span> <span class="toc-text">代码思路</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#定义"><span class="toc-number">1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#原理及几个操作函数"><span class="toc-number">2.</span> <span class="toc-text">原理及几个操作函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#lowbit"><span class="toc-number">2.1.</span> <span class="toc-text">lowbit()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#单点修改-change"><span class="toc-number">2.2.</span> <span class="toc-text">单点修改-change()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#求和函数-addsum"><span class="toc-number">2.3.</span> <span class="toc-text">求和函数-addsum()</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#区间更新-区间查询"><span class="toc-number">3.</span> <span class="toc-text">区间更新 + 区间查询</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#例子"><span class="toc-number">3.1.</span> <span class="toc-text">例子</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>

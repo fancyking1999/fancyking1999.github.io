@@ -6,20 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>PTA 01-复杂度1 最大子列和问题 | FancyKing&#39;s Lovely territory</title>
+  <title>Tag: 树状数组 | FancyKing&#39;s Lovely territory</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="原命题：中国大学MOOC 2018数据结构 链接   PTA 01-复杂度1 最大子列和问题 题面   思路-1 -TLE-代码   思路-2-在线处理 -AC-代码 PTA评判结果   代码思路">
-<meta name="keywords" content="算法,PTA">
-<meta property="og:type" content="article">
-<meta property="og:title" content="PTA 01-复杂度1 最大子列和问题">
-<meta property="og:url" content="http://yoursite.com/2018/05/15/PTA-01-复杂度1-最大子列和问题/index.html">
+  <meta name="description" content="Blog">
+<meta name="keywords" content="FancyKing">
+<meta property="og:type" content="website">
+<meta property="og:title" content="FancyKing&#39;s Lovely territory">
+<meta property="og:url" content="http://yoursite.com/tags/树状数组/index.html">
 <meta property="og:site_name" content="FancyKing&#39;s Lovely territory">
-<meta property="og:description" content="原命题：中国大学MOOC 2018数据结构 链接   PTA 01-复杂度1 最大子列和问题 题面   思路-1 -TLE-代码   思路-2-在线处理 -AC-代码 PTA评判结果   代码思路">
+<meta property="og:description" content="Blog">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-15T12:48:55.997Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PTA 01-复杂度1 最大子列和问题">
-<meta name="twitter:description" content="原命题：中国大学MOOC 2018数据结构 链接   PTA 01-复杂度1 最大子列和问题 题面   思路-1 -TLE-代码   思路-2-在线处理 -AC-代码 PTA评判结果   代码思路">
+<meta name="twitter:title" content="FancyKing&#39;s Lovely territory">
+<meta name="twitter:description" content="Blog">
   
     <link rel="alternative" href="/atom.xml" title="FancyKing&#39;s Lovely territory" type="application/atom+xml">
   
@@ -138,226 +137,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-PTA-01-复杂度1-最大子列和问题" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      PTA 01-复杂度1 最大子列和问题
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/05/20/树状数组/" class="archive-article-date">
+  	<time datetime="2018-05-20T04:54:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-20</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/05/20/树状数组/">树状数组</a>
     </h1>
   
 
-        
-        <a href="/2018/05/15/PTA-01-复杂度1-最大子列和问题/" class="archive-article-date">
-  	<time datetime="2018-05-15T12:45:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-15</time>
-</a>
-		
-		<span class="archive-article-date">
-			阅读量 <span id="busuanzi_value_page_pv"></span>
-		</span>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>原命题：中国大学MOOC 2018数据结构 <a href="https://pintia.cn/problem-sets/951072707007700992/problems/968389752868327424" target="_blank" rel="noopener">链接</a></p>
-</blockquote>
-<ul>
-<li>PTA 01-复杂度1 最大子列和问题<ul>
-<li>题面</li>
-</ul>
-</li>
-<li>思路-1<ul>
-<li>-TLE-代码</li>
-</ul>
-</li>
-<li>思路-2-在线处理<ul>
-<li>-AC-代码</li>
-<li>PTA评判结果</li>
-</ul>
-</li>
-<li>代码思路</li>
-</ul>
-<a id="more"></a>
-<h2 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h2><blockquote>
-<p>01-复杂度1 最大子列和问题（20 分）<br>给定K个整数组成的序列{ N1 , N2 , …, NK  }，“连续子列”被定义为{ Ni , Ni+1 , …, Nj }，其中 1≤i≤j≤K。“最大子列和”则被定义为所有连续子列元素的和中最大者。例如给定序列{ -2, 11, -4, 13, -5, -2 }，其连续子列{ 11, -4, 13 }有最大的和20。现要求你编写程序，计算给定整数序列的最大子列和。</p>
-</blockquote>
-<blockquote>
-<p>本题旨在测试各种不同的算法在各种数据情况下的表现。各组测试数据特点如下：<br>数据1：与样例等价，测试基本正确性；<br>数据2：102个随机整数；<br>数据3：103个随机整数；<br>数据4：104个随机整数；<br>数据5：105个随机整数；</p>
-</blockquote>
-<blockquote>
-<p>输入格式:<br>输入第1行给出正整数K (≤100000)；第2行给出K个整数，其间以空格分隔。<br>输出格式:<br>在一行中输出最大子列和。如果序列中所有整数皆为负数，则输出0。</p>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>输入样例:<br>6<br>-2 11 -4 13 -5 -2<br>输出样例:<br>20</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>作者: DS课程组<br>单位: 浙江大学<br>时间限制: 50000ms<br>内存限制: 64MB</p>
-</blockquote>
-<h1 id="思路-1"><a href="#思路-1" class="headerlink" title="思路-1"></a>思路-1</h1><p>首先想到的思路是简单地单纯的暴力枚举，也就是分别枚举起点和终点，这样的话是可以在不计时间的情况下解决问题的，但是提交上去肯定会TLE</p>
-<hr>
-<h2 id="TLE-代码"><a href="#TLE-代码" class="headerlink" title="-TLE-代码"></a><em>-TLE-代码</em></h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAX = <span class="number">200000</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a[MAX];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LL num;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span> &gt;&gt; num)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(LL i = <span class="number">0</span>; i &lt; num; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; a[i];</span><br><span class="line">        &#125;</span><br><span class="line">        LL MAX = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(LL i = <span class="number">0</span>; i &lt; num; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(LL j = i; j &lt; num; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                LL Temp_Max = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">for</span>(LL k = i; k &lt;= j; k++)</span><br><span class="line">                &#123;</span><br><span class="line">                    Temp_Max += a[k];</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(Temp_Max &gt; MAX)</span><br><span class="line">                    MAX = Temp_Max;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;MAX&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<h1 id="思路-2-在线处理"><a href="#思路-2-在线处理" class="headerlink" title="思路-2-在线处理"></a>思路-2-在线处理</h1><p>然后就想要缩短时间（废话），一开始想着要一个一个的计算，先算出每一个位之前的最大值，然后后面可以利用，后来觉得还是太啰嗦，就没具体写完，看到了陈越姥姥讲的一种思路，就是在线处理，复杂度O（N），可以一边输入一边处理，这样的话，节约时间，也节约了空间，岂不是美哉</p>
-<hr>
-<h2 id="AC-代码"><a href="#AC-代码" class="headerlink" title="-AC-代码"></a><em>-AC-代码</em></h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LL num = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span> &gt;&gt; num)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> MAX = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> NOW = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(LL i = <span class="number">0</span>; i &lt; num ; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> temp = <span class="number">0</span>;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; temp;</span><br><span class="line">            NOW += temp;</span><br><span class="line">            <span class="keyword">if</span>(NOW &gt; MAX)</span><br><span class="line">                MAX = NOW;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(NOW &lt; <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                NOW = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; MAX &lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="PTA评判结果"><a href="#PTA评判结果" class="headerlink" title="PTA评判结果"></a>PTA评判结果</h2><blockquote>
-</blockquote>
-<p>2018/3/17 19:00:35  答案正确    20  01-复杂度1 C++ (clang++)   40 ms<br>测试点 提示  结果  耗时  内存<br>0   sample 有正负，负数开头结尾，最大和有更新    答案正确    3 ms    224KB<br>1   100个随机数 答案正确    2 ms    252KB<br>2   1000个随机数    答案正确    3 ms    256KB<br>3   10000个随机数   答案正确    6 ms    256KB<br>4   100000个随机数  答案正确    40 ms   248KB</p>
-<p>就是比暴力美丽的多（/xk）</p>
-<h2 id="代码思路"><a href="#代码思路" class="headerlink" title="代码思路"></a><em>代码思路</em></h2><p>使用动态处理的方法，现将每n个位数的和算出来，和已经保存下来的最大值相比较，如果大于已知的最大值，则更新，否则，由于规定全是负数的话，结果为0，那么每一步都判断一下<code>Temp_Max</code>的正负就好，并不需要担心最大值会丢失，因为如果有最大值，肯定已经保存下来了。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PTA</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">树状数组</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/05/15/PTA-01-复杂度1-最大子列和问题/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/05/17/并查集笔记/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          数据结构 — — 并查集
-        
-      </div>
-    </a>
   
   
-    <a href="/2018/05/15/Sublime-Text-3-折腾笔记/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Sublime Text 3 折腾笔记</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题面"><span class="toc-number">1.</span> <span class="toc-text">题面</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#思路-1"><span class="toc-number"></span> <span class="toc-text">思路-1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#TLE-代码"><span class="toc-number">1.</span> <span class="toc-text">-TLE-代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#思路-2-在线处理"><span class="toc-number"></span> <span class="toc-text">思路-2-在线处理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#AC-代码"><span class="toc-number">1.</span> <span class="toc-text">-AC-代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PTA评判结果"><span class="toc-number">2.</span> <span class="toc-text">PTA评判结果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码思路"><span class="toc-number">3.</span> <span class="toc-text">代码思路</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -384,9 +217,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
