@@ -6,19 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 题解 | FancyKing&#39;s Lovely territory</title>
+  <title>Java 方法详解 | FancyKing&#39;s Lovely territory</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Blog">
-<meta name="keywords" content="FancyKing">
-<meta property="og:type" content="website">
-<meta property="og:title" content="FancyKing&#39;s Lovely territory">
-<meta property="og:url" content="http://yoursite.com/tags/题解/index.html">
+  <meta name="description" content="Java 方法详解方法的所属性 如果一个方法使用了  static 修饰，那么这个方法属于这个类本身，否则就属于实例对象。 在同一个类中，方法的调用者总是  this 或者 类 当被调方法是普通方法的时候，默认使用 this 作为调用者 当被调方法是静态方法的时候，默认使用 类 作为被调者     方法不能独立定义，只能在类体内进行定义 从逻辑上看，方法要么属于类本身，要么属于类的某一个实例对象">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java 方法详解">
+<meta property="og:url" content="http://yoursite.com/2018/10/17/Java-方法详解/index.html">
 <meta property="og:site_name" content="FancyKing&#39;s Lovely territory">
-<meta property="og:description" content="Blog">
+<meta property="og:description" content="Java 方法详解方法的所属性 如果一个方法使用了  static 修饰，那么这个方法属于这个类本身，否则就属于实例对象。 在同一个类中，方法的调用者总是  this 或者 类 当被调方法是普通方法的时候，默认使用 this 作为调用者 当被调方法是静态方法的时候，默认使用 类 作为被调者     方法不能独立定义，只能在类体内进行定义 从逻辑上看，方法要么属于类本身，要么属于类的某一个实例对象">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://i.loli.net/2018/10/16/5bc54385b83b1.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/16/5bc55240288d5.jpg">
+<meta property="og:updated_time" content="2018-10-17T11:06:55.584Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="FancyKing&#39;s Lovely territory">
-<meta name="twitter:description" content="Blog">
+<meta name="twitter:title" content="Java 方法详解">
+<meta name="twitter:description" content="Java 方法详解方法的所属性 如果一个方法使用了  static 修饰，那么这个方法属于这个类本身，否则就属于实例对象。 在同一个类中，方法的调用者总是  this 或者 类 当被调方法是普通方法的时候，默认使用 this 作为调用者 当被调方法是静态方法的时候，默认使用 类 作为被调者     方法不能独立定义，只能在类体内进行定义 从逻辑上看，方法要么属于类本身，要么属于类的某一个实例对象">
+<meta name="twitter:image" content="https://i.loli.net/2018/10/16/5bc54385b83b1.png">
   
     <link rel="alternative" href="/atom.xml" title="FancyKing&#39;s Lovely territory" type="application/atom+xml">
   
@@ -137,98 +141,216 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Java-方法详解" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/29/【题解】POJ-3279-Fliptile/" class="archive-article-date">
-  	<time datetime="2018-08-29T13:44:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-29</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/29/【题解】POJ-3279-Fliptile/">【题解】POJ-3279-Fliptile</a>
+    <h1 class="article-title" itemprop="name">
+      Java 方法详解
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/10/17/Java-方法详解/" class="archive-article-date">
+  	<time datetime="2018-10-17T10:50:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-17</time>
+</a>
+		
+		<span class="archive-article-date">
+			阅读量 <span id="busuanzi_value_page_pv"></span>
+		</span>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Java-方法详解"><a href="#Java-方法详解" class="headerlink" title="Java 方法详解"></a>Java 方法详解</h1><h2 id="方法的所属性"><a href="#方法的所属性" class="headerlink" title="方法的所属性"></a>方法的所属性</h2><ul>
+<li>如果一个方法使用了  static 修饰，那么这个方法属于这个类本身，否则就属于实例对象。</li>
+<li>在同一个类中，方法的调用者总是  this 或者 类<ul>
+<li>当被调方法是普通方法的时候，默认使用 this 作为调用者</li>
+<li>当被调方法是静态方法的时候，默认使用 类 作为被调者</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>方法不能独立定义，只能在类体内进行定义</li>
+<li>从逻辑上看，方法要么属于类本身，要么属于类的某一个实例对象</li>
+<li>永远无法独立的执行方法，执行方法必须使用类或者对象作为调用者</li>
+</ol>
+<p>静态方法属于类本身，不属于任何实例对象，但是二者都可以调用</p>
+<h2 id="方法的参数传递机制"><a href="#方法的参数传递机制" class="headerlink" title="方法的参数传递机制"></a>方法的参数传递机制</h2><ul>
+<li>Java 只有一种参数传递机制，就是值传递，相当于拷贝，拷贝之后的改变对于原实参没有影响</li>
+</ul>
+<h2 id="形参个数可变的方法"><a href="#形参个数可变的方法" class="headerlink" title="形参个数可变的方法"></a>形参个数可变的方法</h2><ul>
+<li>如果在定义方法的时候，在 ==最后一个形参== 后面增加三个点(.)， 则就表示该形参可以接受多个该类型的参数</li>
+<li>形参个数可变对于每个方法最多只有一个，并且仅仅用于最后一个形参，其余形参个数不可变，传入自动转为数组的形式传入</li>
+</ul>
+<h2 id="方法重载"><a href="#方法重载" class="headerlink" title="方法重载"></a>方法重载</h2><ul>
+<li>Java中一个方法的判定要看三个方面：<ol>
+<li>调用者，方法的所属者，可以是对象，也可以是类</li>
+<li>方法名， 方法的标识</li>
+<li>形参列表， 当调用方法的时候，系统会根据实际传入的参数进行再一次的匹配</li>
+</ol>
+</li>
+<li>也就是说，如果要重载一个方法， 必须要保证两同一不同：同一个类中，方法名相同，参数列表不同</li>
+<li>返回值，修饰符等其他因素不同的，不算做方法的重载</li>
+<li>对于包含有形参可变的方法，当该位置只传入一个参数的时候，优先调用不是形参可变的方法</li>
+</ul>
+<h2 id="成员变量和局部变量"><a href="#成员变量和局部变量" class="headerlink" title="成员变量和局部变量"></a>成员变量和局部变量</h2><p><img src="https://i.loli.net/2018/10/16/5bc54385b83b1.png" alt="成员变量和局部变量"></p>
+<ul>
+<li>成员变量是在类里面进行定义的变量，局部变量是在方法里面定义的变量</li>
+<li>成员变量分为类变量和实例变量两种，static 修饰的是类变量， 和类的生存时间相同， 没有static修饰的属于实例变量，和变量的生存时间相同</li>
+<li>一个类的生存周期包括 : 类加载-类验证-类准备-类解析-类初始化-类使用-类卸载<ul>
+<li>类加载-类验证-类准备-类初始化的发生顺序是确认的，但是解析阶段不一定，解析有可能</li>
+</ul>
+</li>
+</ul>
+<p>发生在初始化阶段之后，然后再去进行类使用</p>
+<p>​            <img src="https://i.loli.net/2018/10/16/5bc55240288d5.jpg" alt="类的生存周期">)</p>
+<ul>
+<li>一个类中不能定义两个同名的成员变量(一个是类变量，一个是实例变量也不行)</li>
+<li>同一个方法中不能定义同名的方法局部变量，但是不同的代码块变量可以重名</li>
+<li>在允许的情况下，默认使用就近原则来进行变量的运算</li>
+</ul>
+<h2 id="局部变量的初始化和内存中的运行机制"><a href="#局部变量的初始化和内存中的运行机制" class="headerlink" title="局部变量的初始化和内存中的运行机制"></a>局部变量的初始化和内存中的运行机制</h2><ul>
+<li>局部变量经过定义后，只有在被赋值时才会被分配内存空间，定义时不进行初始化</li>
+<li>局部变量总是保存在所在方法的 栈 内存中，栈中的变量无需系统垃圾回收，随方法或代码块结束而结束</li>
+<li>尽可能的缩小局部变量的作用范围</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">题解</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/10/17/Java-方法详解/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/29/【题解】Recovery-The-North-American-Invitational-Programming-Contest-2018/" class="archive-article-date">
-  	<time datetime="2018-08-29T13:44:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-29</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/09/25/数据结构PTA笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数据结构PTA笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/29/【题解】Recovery-The-North-American-Invitational-Programming-Contest-2018/">【题解】Recovery-The North American Invitational Programming Contest 2018</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">题解</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java-方法详解"><span class="toc-number">1.</span> <span class="toc-text">Java 方法详解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#方法的所属性"><span class="toc-number">1.1.</span> <span class="toc-text">方法的所属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法的参数传递机制"><span class="toc-number">1.2.</span> <span class="toc-text">方法的参数传递机制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#形参个数可变的方法"><span class="toc-number">1.3.</span> <span class="toc-text">形参个数可变的方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法重载"><span class="toc-number">1.4.</span> <span class="toc-text">方法重载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#成员变量和局部变量"><span class="toc-number">1.5.</span> <span class="toc-text">成员变量和局部变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#局部变量的初始化和内存中的运行机制"><span class="toc-number">1.6.</span> <span class="toc-text">局部变量的初始化和内存中的运行机制</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -255,9 +377,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
