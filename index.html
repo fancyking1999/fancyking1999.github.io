@@ -160,7 +160,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="TOC"><a href="#TOC" class="headerlink" title="[TOC]"></a>[TOC]</h1>
+        <p>Java 学习笔记</p>
         
           <a class="article-more-a" href="/2018/10/17/Java-方法详解/#more">More about it >></a>
         
@@ -320,7 +320,7 @@
 </blockquote>
 <p>这里借用 维基百科给出的样例</p>
 <p>/<em> 例一：函数指针直接调用 </em>/<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">ifndef</span> __cplusplus</span></span><br><span class="line">    <span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta"># <span class="meta-keyword">else</span></span></span><br><span class="line">    <span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta"># <span class="meta-keyword">endif</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x &gt; y ? x : y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">/* p 是函数指针 */</span></span><br><span class="line">    <span class="keyword">int</span> (* p)(<span class="keyword">int</span>, <span class="keyword">int</span>) = &amp; max; <span class="comment">// &amp;可以省略</span></span><br><span class="line">    <span class="comment">// int (* p)(int, int) = max;//与上条语句等价</span></span><br><span class="line">    <span class="keyword">int</span> a, b, c, d;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"please input 3 numbers:"</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"&#123;2186e5f7970dac0e9cf7cfc7913f086a2d003118a30b627bce447294ada8be4e&#125;d &#123;2186e5f7970dac0e9cf7cfc7913f086a2d003118a30b627bce447294ada8be4e&#125;d &#123;2186e5f7970dac0e9cf7cfc7913f086a2d003118a30b627bce447294ada8be4e&#125;d"</span>, &amp; a, &amp; b, &amp; c);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* 与直接调用函数等价，d = max(max(a, b), c) */</span></span><br><span class="line">    d = p(p(a, b), c); </span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"the maxumum number is: &#123;2186e5f7970dac0e9cf7cfc7913f086a2d003118a30b627bce447294ada8be4e&#125;d\n"</span>, d);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 例二：函数指针作为参数 */</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">object</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> data;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">object_compare</span><span class="params">(struct object * a,struct object * z)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a-&gt;data &lt; z-&gt;data ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">struct object *maximum(struct object * begin,struct object * end,int (* compare)(struct object *, struct object *))</span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">object</span> * <span class="title">result</span> = <span class="title">begin</span>;</span></span><br><span class="line">    <span class="keyword">while</span>(begin != end)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(compare(result, begin))</span><br><span class="line">        &#123;</span><br><span class="line">            result = begin;</span><br><span class="line">        &#125;</span><br><span class="line">        ++ begin;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">object</span> <span class="title">data</span>[8] = &#123;</span>&#123;<span class="number">0</span>&#125;, &#123;<span class="number">1</span>&#125;, &#123;<span class="number">2</span>&#125;, &#123;<span class="number">3</span>&#125;, &#123;<span class="number">4</span>&#125;, &#123;<span class="number">5</span>&#125;, &#123;<span class="number">6</span>&#125;, &#123;<span class="number">7</span>&#125;&#125;;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">object</span> * <span class="title">max</span>;</span></span><br><span class="line">    max = maximum(data + <span class="number">0</span>, data + <span class="number">8</span>, &amp; object_compare);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 例二：函数指针作为参数 */</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">object</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> data;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">object_compare</span><span class="params">(struct object * a,struct object * z)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a-&gt;data &lt; z-&gt;data ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">struct object *<span class="title">maximum</span><span class="params">(struct object * begin,struct object * end,<span class="keyword">int</span> (* compare)(struct object *, struct object *))</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">object</span> * <span class="title">result</span> = <span class="title">begin</span>;</span></span><br><span class="line">    <span class="keyword">while</span>(begin != end)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(compare(result, begin))</span><br><span class="line">        &#123;</span><br><span class="line">            result = begin;</span><br><span class="line">        &#125;</span><br><span class="line">        ++ begin;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">object</span> <span class="title">data</span>[8] = &#123;</span>&#123;<span class="number">0</span>&#125;, &#123;<span class="number">1</span>&#125;, &#123;<span class="number">2</span>&#125;, &#123;<span class="number">3</span>&#125;, &#123;<span class="number">4</span>&#125;, &#123;<span class="number">5</span>&#125;, &#123;<span class="number">6</span>&#125;, &#123;<span class="number">7</span>&#125;&#125;;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">object</span> * <span class="title">max</span>;</span></span><br><span class="line">    max = maximum(data + <span class="number">0</span>, data + <span class="number">8</span>, &amp; object_compare);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -765,11 +765,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -853,11 +853,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -986,18 +986,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">C++笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">PTA</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
@@ -1011,6 +999,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">C++笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">PTA</a>
               </li>
              
               <li class="article-tag-list-item">
