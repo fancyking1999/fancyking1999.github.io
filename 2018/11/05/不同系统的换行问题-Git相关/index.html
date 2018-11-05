@@ -6,19 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018/10 | FancyKing&#39;s Lovely territory</title>
+  <title>不同系统的换行问题(Git相关) | FancyKing&#39;s Lovely territory</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Blog">
-<meta name="keywords" content="FancyKing">
-<meta property="og:type" content="website">
-<meta property="og:title" content="FancyKing&#39;s Lovely territory">
-<meta property="og:url" content="http://yoursite.com/archives/2018/10/index.html">
+  <meta name="description" content="写在前面 在直接用 Git 命令行上传爬下来的代码的时候，发现上传到Github上的代码文件异常，具体表现为，在代码文件使用 txt 格式结尾的时候，浏览代码结构松散，进一步检查发现在行末有不可见的符号，使用 cc 结尾的文件，在行尾都有一个^M， 后来谷歌出了结果，记录如下（确实吐槽某度）">
+<meta name="keywords" content="Git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="不同系统的换行问题(Git相关)">
+<meta property="og:url" content="http://yoursite.com/2018/11/05/不同系统的换行问题-Git相关/index.html">
 <meta property="og:site_name" content="FancyKing&#39;s Lovely territory">
-<meta property="og:description" content="Blog">
+<meta property="og:description" content="写在前面 在直接用 Git 命令行上传爬下来的代码的时候，发现上传到Github上的代码文件异常，具体表现为，在代码文件使用 txt 格式结尾的时候，浏览代码结构松散，进一步检查发现在行末有不可见的符号，使用 cc 结尾的文件，在行尾都有一个^M， 后来谷歌出了结果，记录如下（确实吐槽某度）">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://i.loli.net/2018/11/05/5be044df84fd0.png">
+<meta property="og:updated_time" content="2018-11-05T13:38:00.598Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="FancyKing&#39;s Lovely territory">
-<meta name="twitter:description" content="Blog">
+<meta name="twitter:title" content="不同系统的换行问题(Git相关)">
+<meta name="twitter:description" content="写在前面 在直接用 Git 命令行上传爬下来的代码的时候，发现上传到Github上的代码文件异常，具体表现为，在代码文件使用 txt 格式结尾的时候，浏览代码结构松散，进一步检查发现在行末有不可见的符号，使用 cc 结尾的文件，在行尾都有一个^M， 后来谷歌出了结果，记录如下（确实吐槽某度）">
+<meta name="twitter:image" content="https://i.loli.net/2018/11/05/5be044df84fd0.png">
   
     <link rel="alternative" href="/atom.xml" title="FancyKing&#39;s Lovely territory" type="application/atom+xml">
   
@@ -137,60 +140,191 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-不同系统的换行问题-Git相关" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/10/17/Java-方法详解/" class="archive-article-date">
-  	<time datetime="2018-10-17T10:50:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-17</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/10/17/Java-方法详解/">Java 方法详解</a>
+    <h1 class="article-title" itemprop="name">
+      不同系统的换行问题(Git相关)
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/11/05/不同系统的换行问题-Git相关/" class="archive-article-date">
+  	<time datetime="2018-11-05T13:33:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-05</time>
+</a>
+		
+		<span class="archive-article-date">
+			阅读量 <span id="busuanzi_value_page_pv"></span>
+		</span>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><ul>
+<li>在直接用 Git 命令行上传爬下来的代码的时候，发现上传到Github上的代码文件异常，具体表现为，在代码文件使用 txt 格式结尾的时候，浏览代码结构松散，进一步检查发现在行末有不可见的符号，使用 cc 结尾的文件，在行尾都有一个<strong>^M</strong>， 后来谷歌出了结果，记录如下（确实吐槽某度）</li>
+</ul>
+<a id="more"></a>
+<ul>
+<li>换行符和回车符的区别<ul>
+<li>换行符是另起一行，使用 ‘\n’来表示，意味 ‘newline‘</li>
+<li>回车符是回到一行的开头，使用 ‘\r’来表示， 意味 ‘return’</li>
+</ul>
+</li>
+<li>不同操作系统平台的换行符<ul>
+<li>Unix / Linux 使用的是 ‘LF’ (0x0A)</li>
+<li>现在的MacOS使用的是 ‘CR’ (0x0D)</li>
+<li>DOS / Windown 上使用的是 ‘CRLF’ (0x0D0A)</li>
+</ul>
+</li>
+<li>换行符底层标识符不同也就导致了在不同的平台上，阅读和执行的体验结果可能有区别，这次将在Win平台上爬下来的以 UTF-8 编码保存的文档上传到Github时，就成功入坑了</li>
+<li>Git 有一个功能叫做 换行符自动转换，在使用 git 的时候，该功能时默认开启的，作用就是，当你将项目clone到本地的时候，git自动的将文件中的换行符换成Win的CRLF，而当add和push 的时候，git再自动的把项目文件的所有CRLF换成LF，WTF？这样首先就把所有的文件每一行都改变了，diff看不出具体修改了哪里</li>
+</ul>
+<p><img src="https://i.loli.net/2018/11/05/5be044df84fd0.png" alt="Git"></p>
+<h2 id="推荐解决方法"><a href="#推荐解决方法" class="headerlink" title="推荐解决方法"></a>推荐解决方法</h2><ul>
+<li>首先，在安装Git客户端被询问是否开启自动换行符转换的时候，选择 ‘Checkout as-is, commit as-is’，（尤其是UTF-8，尤其是包括中文）</li>
+<li>推荐在命令行下更改设置为不自动替换换行符，但是强制开启换行符检查功能，避免发布的文件出现问题</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global core.autocrlf false</span><br><span class="line">git config --global core.safecrlf true</span><br></pre></td></tr></table></figure>
+<ul>
+<li>再就是如果是爬下来的，或者是编辑时选择的不是Unix格式的换行符的，Git提供了一个叫做dos2unix的命令让文件替换成Unix格式，Linux如果没有的话apt / yum安装一下就好</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/11/05/不同系统的换行问题-Git相关/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2018/10/17/Java-方法详解/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java 方法详解</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写在前面"><span class="toc-number">1.</span> <span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#推荐解决方法"><span class="toc-number">2.</span> <span class="toc-text">推荐解决方法</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -217,8 +351,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
